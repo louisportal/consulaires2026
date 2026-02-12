@@ -56,6 +56,16 @@ main {
     font-weight: 700;
 }
 
+.vote-section .intro-link {
+    color: #faf7f6;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+.vote-section .intro-link:hover {
+    opacity: 0.8;
+}
+
 .vote-section h3 {
     color: #faf7f6;
     margin-bottom: 20px;
@@ -123,6 +133,12 @@ main {
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0,0,0,0.15);
     letter-spacing: 0.02em;
+}
+
+.action-btn .arrow {
+    font-size: 1.8em;
+    margin-left: 8px;
+    font-weight: 400;
 }
 
 .action-btn:hover {
