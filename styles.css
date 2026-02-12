@@ -13,15 +13,70 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px 0;
 }
 
 main {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     padding: 40px 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 50px;
+}
+
+.welcome-box {
+    background: linear-gradient(to right, #032149 0%, #23a9c6 60%, transparent 100%);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(3, 33, 73, 0.2);
+    text-align: left;
+    width: 100%;
+    max-width: 700px;
+}
+
+.welcome-box h2 {
+    color: #faf7f6;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.welcome-box .subtitle {
+    color: #faf7f6;
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.info-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.info-list li {
+    color: #faf7f6;
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.info-list li:last-child {
+    margin-bottom: 0;
+}
+
+.info-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #23a9c6;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 .buttons-container {
@@ -60,6 +115,26 @@ main {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    main {
+        gap: 40px;
+    }
+
+    .welcome-box {
+        padding: 30px;
+    }
+
+    .welcome-box h2 {
+        font-size: 1.3em;
+    }
+
+    .welcome-box .subtitle {
+        font-size: 1.1em;
+    }
+
+    .info-list li {
+        font-size: 0.95em;
+    }
+
     .buttons-container {
         gap: 30px;
     }
@@ -73,6 +148,29 @@ main {
 }
 
 @media (max-width: 500px) {
+    main {
+        gap: 30px;
+        padding: 20px 10px;
+    }
+
+    .welcome-box {
+        padding: 25px 20px;
+    }
+
+    .welcome-box h2 {
+        font-size: 1.2em;
+    }
+
+    .welcome-box .subtitle {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .info-list li {
+        font-size: 0.9em;
+        padding-left: 25px;
+    }
+
     .buttons-container {
         flex-direction: column;
         gap: 25px;
