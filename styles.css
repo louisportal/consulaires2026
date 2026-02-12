@@ -50,7 +50,7 @@ main {
 
 .vote-section {
     position: relative;
-    background: linear-gradient(to right, #032149 0%, #23a9c6 60%, transparent 100%);
+    background: linear-gradient(to right, #032149 0%, #23a9c6 85%);
     background-size: cover, cover;
     background-position: left center, right center;
     background-repeat: no-repeat, no-repeat;
@@ -62,9 +62,23 @@ main {
     max-width: 700px;
 }
 
+.vote-section .intro-text {
+    color: #faf7f6;
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.vote-section .intro-text strong {
+    font-weight: 700;
+}
+
 .vote-section h3 {
     color: #faf7f6;
     margin-bottom: 20px;
+    margin-top: 10px;
     font-size: 1.4em;
     border-bottom: none;
     padding-bottom: 12px;
@@ -135,6 +149,27 @@ main {
     background: linear-gradient(135deg, #23a9c6, #032149);
 }
 
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+    background: #faf7f6;
+    color: #032149;
+    border-top: 3px solid #23a9c6;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #032149;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: #23a9c6;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     main {
@@ -174,7 +209,12 @@ main {
 
     .vote-section {
         padding: 20px;
-        background: linear-gradient(to right, #032149 0%, #23a9c6 60%, transparent 100%) !important;
+        background: linear-gradient(to right, #032149 0%, #23a9c6 85%) !important;
+    }
+
+    .vote-section .intro-text {
+        font-size: 0.9em;
+        margin-bottom: 20px;
     }
 
     .vote-section h3 {
