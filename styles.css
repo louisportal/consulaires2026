@@ -27,50 +27,51 @@ main {
     gap: 50px;
 }
 
-.welcome-box {
+.vote-section {
+    position: relative;
     background: linear-gradient(to right, #032149 0%, #23a9c6 60%, transparent 100%);
-    padding: 40px;
+    background-size: cover, cover;
+    background-position: left center, right center;
+    background-repeat: no-repeat, no-repeat;
+    padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(3, 33, 73, 0.2);
-    text-align: left;
+    overflow: hidden;
     width: 100%;
     max-width: 700px;
 }
 
-.welcome-box h2 {
+.vote-section h3 {
     color: #faf7f6;
-    margin-bottom: 10px;
-    font-size: 1.6em;
-    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    border-bottom: none;
+    padding-bottom: 12px;
+    position: relative;
+    z-index: 1;
 }
 
-.welcome-box .subtitle {
-    color: #faf7f6;
-    font-size: 1.2em;
-    margin-bottom: 25px;
-    font-weight: 500;
-}
-
-.info-list {
+.vote-list {
     list-style: none;
     padding-left: 0;
-    margin: 0;
+    position: relative;
+    z-index: 1;
 }
 
-.info-list li {
-    color: #faf7f6;
-    font-size: 1.05em;
-    line-height: 1.6;
+.vote-list-item {
     margin-bottom: 15px;
     padding-left: 30px;
     position: relative;
+    color: #faf7f6;
+    font-size: 1.05em;
+    line-height: 1.6;
 }
 
-.info-list li:last-child {
+.vote-list-item:last-child {
     margin-bottom: 0;
 }
 
-.info-list li::before {
+.vote-list-item::before {
     content: "✓";
     position: absolute;
     left: 0;
@@ -119,19 +120,16 @@ main {
         gap: 40px;
     }
 
-    .welcome-box {
-        padding: 30px;
+    .vote-section {
+        padding: 25px;
     }
 
-    .welcome-box h2 {
-        font-size: 1.3em;
+    .vote-section h3 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
     }
 
-    .welcome-box .subtitle {
-        font-size: 1.1em;
-    }
-
-    .info-list li {
+    .vote-list-item {
         font-size: 0.95em;
     }
 
@@ -153,20 +151,16 @@ main {
         padding: 20px 10px;
     }
 
-    .welcome-box {
-        padding: 25px 20px;
+    .vote-section {
+        padding: 20px;
+        background: linear-gradient(to right, #032149 0%, #23a9c6 60%, transparent 100%) !important;
     }
 
-    .welcome-box h2 {
-        font-size: 1.2em;
+    .vote-section h3 {
+        font-size: 1.1em;
     }
 
-    .welcome-box .subtitle {
-        font-size: 1em;
-        margin-bottom: 20px;
-    }
-
-    .info-list li {
+    .vote-list-item {
         font-size: 0.9em;
         padding-left: 25px;
     }
