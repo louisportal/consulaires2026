@@ -7,38 +7,116 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Fixed Navigation Header -->
+    <nav class="fixed-header">
+        <div class="nav-container">
+            <div class="nav-left">
+                <h1 class="nav-title">Élections Consulaires 2026</h1>
+                <p class="nav-subtitle">Conseillers des Français de l'étranger & Délégués consulaires</p>
+            </div>
+            <div class="nav-actions">
+                <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R51788" target="_blank" class="nav-cta-secondary">
+                    Vérifier ma situation
+                </a>
+                <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R43248" target="_blank" class="nav-cta">
+                    M'inscrire maintenant
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <main>
-        <div class="vote-section">
-            <p class="intro-text">Le ministère de l'Europe et des Affaires étrangères a communiqué le <a href="https://www.diplomatie.gouv.fr/fr/services-aux-francais/elections-a-l-etranger/elections-des-conseillers-des-francais-de-l-etranger-et-des-delegues/" target="_blank" class="intro-link"><strong>calendrier officiel des prochaines élections consulaires</strong></a>, qui se tiendront les 30 et 31 mai 2026 à l'urne ou du 22 au 27 mai par voie électronique. Ces scrutins permettront d'élire les conseillers des Français de l'étranger ainsi que les délégués consulaires.</p>
+        <!-- Dates importantes -->
+        <section class="dates-section">
+            <p class="intro-text">Les élections des conseillers des Français de l'étranger et des délégués consulaires auront lieu en mai 2026. Ce scrutin permet d'élire vos représentants auprès des consulats, et parmi eux les représentants à l'Assemblée des Français de l'étranger.</p>
 
-            <h3>Pour voter</h3>
-            <p class="vote-instruction">Inscrivez-vous sur la Liste Electorale Consulaire (LEC) jusqu'au <strong>24 Avril 2026</strong></p>
-            <ul class="vote-list">
-                <li class="vote-list-item">En vous rendant directement au consulat (ou à l'ambassade)</li>
-                <li class="vote-list-item">En ligne (par le registre des Français établis hors de France), via le lien ci-dessous</li>
-            </ul>
+            <div class="dates-grid">
+                <div class="date-card urgent">
+                    <div class="urgent-badge">Important</div>
+                    <div class="date-label">Inscrivez-vous sur la Liste Électorale Consulaire (LEC) jusqu'au</div>
+                    <div class="date-value">24 avril 2026</div>
+                </div>
+                <div class="date-card">
+                    <div class="date-label">Vote électronique</div>
+                    <div class="date-value">22-27 mai</div>
+                </div>
+                <div class="date-card">
+                    <div class="date-label">Vote à l'urne</div>
+                    <div class="date-value-detail"><strong>30 mai</strong> : continent américain et Caraïbes</div>
+                    <div class="date-value-detail"><strong>31 mai</strong> : reste du monde</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section CFE Collapsible -->
+        <div class="collapsible-section" id="cfe">
+            <div class="section-header" onclick="toggleSection(this)">
+                <h2>Conseiller des Français de l'Étranger - C'est quoi ?</h2>
+                <span class="toggle-icon">v</span>
+            </div>
+            <div class="section-content">
+                <div class="about-grid">
+                    <div>
+                        <img src="assets/Info/Conseillers_consulaires.jpg" alt="Les Conseillers des Français de l'Étranger" class="profile-photo zoomable" style="cursor:pointer;" onclick="document.getElementById('lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.src;" />
+                    </div>
+                    <div class="about-content">
+                        <p><strong>Le Conseiller des Français de l'Étranger est un élu de proximité,</strong> représentant les Français établis hors de France. Élu au suffrage universel direct pour un mandat de 6 ans, il siège au sein du Conseil consulaire.</p>
+
+                        <p>Ses missions principales :</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li>Représenter les Français de sa circonscription consulaire</li>
+                            <li>Donner un avis sur les questions consulaires (bourses scolaires, aides sociales, etc.)</li>
+                            <li>Être un interlocuteur privilégié entre les Français et l'administration consulaire</li>
+                            <li>Participer à l'Assemblée des Français de l'Étranger (AFE)</li>
+                        </ul>
+
+                        <p>Le Conseil consulaire se réunit au moins deux fois par an sous la présidence de l'ambassadeur ou du consul général. Il traite des questions liées à la <strong>protection sociale, l'enseignement français, la sécurité</strong> et d'autres sujets touchant la vie quotidienne des Français de l'étranger.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="buttons-container">
-            <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F16904" target="_blank" class="action-btn">
-                Tout sur le vote à l'étranger <span class="arrow">→</span>
-            </a>
-            <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R51788" target="_blank" class="action-btn">
-                Vérifier ma situation <span class="arrow">→</span>
-            </a>
-            <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F33307" target="_blank" class="action-btn">
-                M'inscrire au registre <span class="arrow">→</span>
-            </a>
-        </div>
     </main>
 
-    <!-- Footer ASFE - désactivé temporairement -->
-    <!--
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox-overlay">
+        <img id="lightbox-img" src="" alt="" class="lightbox-img" />
+    </div>
+
+    <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.toggle-icon');
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('open');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('open');
+            }
+        }
+
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+    </script>
+
+    <!-- Footer -->
     <footer>
-        <p style="margin-top: 10px;">
-            <a href="https://alliancesolidaire.org" target="_blank">Alliance Solidaire des Français de l'Étranger</a>
-        </p>
+        <div class="footer-actions">
+            <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F16904" target="_blank" class="footer-btn">
+                Tout sur le vote à l'étranger
+            </a>
+            <a href="https://www.diplomatie.gouv.fr/fr/services-aux-francais/elections-a-l-etranger/elections-des-conseillers-des-francais-de-l-etranger-et-des-delegues/" target="_blank" class="footer-btn">
+                France Diplomatie
+            </a>
+        </div>
+        <p>ASFE - Alliance Solidaire des Français de l'Étranger</p>
+        <p><a href="https://alliancesolidaire.org" target="_blank">Alliance Solidaire</a></p>
     </footer>
-    -->
 </body>
 </html>
