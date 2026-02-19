@@ -11,7 +11,7 @@ body {
     background-color: #faf7f6;
     min-height: 100vh;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
 }
@@ -317,22 +317,19 @@ section {
 
 /* Footer */
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background: #faf7f6;
     border-top: 3px solid #23a9c6;
     padding: 15px 20px;
     text-align: center;
     color: #032149;
+    margin-top: auto;
 }
 
 .footer-actions {
     display: flex;
     gap: 15px;
     justify-content: center;
-    margin-bottom: 15px;
+    padding: 25px 20px;
     flex-wrap: wrap;
 }
 
@@ -385,7 +382,7 @@ footer a:hover {
 @media (max-width: 768px) {
     body {
         padding-top: 200px;
-        padding-bottom: 100px;
+        padding-bottom: 0;
     }
 
     .nav-container {
