@@ -16,6 +16,7 @@ body {
     flex-direction: column;
 }
 
+/* Background ASFE - MASQUÉ
 body::before {
     content: '';
     position: fixed;
@@ -31,6 +32,7 @@ body::before {
     z-index: 0;
     pointer-events: none;
 }
+*/
 
 /* Fixed Header Navigation */
 .fixed-header {
