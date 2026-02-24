@@ -160,21 +160,30 @@ section {
     margin-bottom: 8px;
 }
 
-.urgent-cta-btn {
+.date-value-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.urgent-cta-btn,
+.urgent-cta-btn:visited,
+.urgent-cta-btn:link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 42px;
-    height: 42px;
-    background: #ff4757;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background-color: #ff4757 !important;
     border-radius: 50%;
-    margin-top: 12px;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
     text-decoration: none;
+    border: none;
 }
 
 .urgent-cta-btn:hover {
-    background: #e03040;
+    background-color: #e03040 !important;
     transform: scale(1.1);
 }
 
