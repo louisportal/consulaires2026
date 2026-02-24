@@ -16,24 +16,6 @@ body {
     flex-direction: column;
 }
 
-/* Background ASFE - MASQUÉ
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('assets/logo-1.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 600px;
-    opacity: 0.08;
-    z-index: 0;
-    pointer-events: none;
-}
-*/
-
 /* Fixed Header Navigation */
 .fixed-header {
     position: fixed;
@@ -176,6 +158,24 @@ section {
     font-size: 0.8em;
     font-weight: 600;
     margin-bottom: 8px;
+}
+
+.urgent-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: #ff4757;
+    border-radius: 50%;
+    margin-top: 12px;
+    transition: background 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.urgent-cta-btn:hover {
+    background: #e03040;
+    transform: scale(1.1);
 }
 
 .date-label {
@@ -375,59 +375,6 @@ footer a:hover {
     color: #23a9c6;
 }
 
-/* Year Sub-sections (collapsible) */
-.year-section {
-    margin-bottom: 30px;
-    border: none;
-    border-radius: 0;
-    background: transparent;
-}
-
-.year-header {
-    background: transparent;
-    color: #032149;
-    padding: 10px 0;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: color 0.3s ease;
-    border-bottom: 2px solid #23a9c6;
-}
-
-.year-header:hover {
-    color: #032149;
-}
-
-.year-label {
-    font-size: 1.5em;
-    font-weight: 600;
-}
-
-.year-toggle {
-    font-size: 1.5em;
-    transition: transform 0.3s ease;
-    font-weight: 300;
-    font-family: Helvetica, Arial, sans-serif;
-    letter-spacing: 0.1em;
-}
-
-.year-toggle.open {
-    transform: rotate(180deg);
-}
-
-.year-content {
-    display: none;
-}
-
-.year-content.open {
-    display: block;
-    max-height: 500px;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    padding: 20px;
-}
-
 /* Responsive */
 @media (max-width: 992px) {
     .dates-grid {
@@ -488,10 +435,6 @@ footer a:hover {
         padding: 15px 0;
     }
 
-    .year-label {
-        font-size: 1.3em;
-    }
-
     .footer-actions {
         flex-direction: column;
         gap: 10px;
@@ -530,14 +473,6 @@ footer a:hover {
     .footer-btn {
         font-size: 0.9em;
         padding: 8px 14px;
-    }
-
-    .year-label {
-        font-size: 1.2em;
-    }
-
-    .year-content.open {
-        padding: 15px 10px;
     }
 
     .section-header h2 {
