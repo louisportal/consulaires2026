@@ -153,11 +153,12 @@ section {
     display: inline-block;
     background: #ff4757;
     color: #ffffff;
-    padding: 3px 10px;
+    padding: 6px 12px;
     border-radius: 6px;
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 600;
     margin-bottom: 8px;
+    line-height: 1.4;
 }
 
 .date-value-row {
@@ -404,7 +405,7 @@ footer a:hover {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 160px;
+        padding-top: 120px;
         padding-bottom: 0;
     }
 
