@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "site",
-      "runtimeExecutable": "ruby",
-      "runtimeArgs": ["-run", "-e", "httpd", "--", "--port=8080", "--document-root=."],
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-c", "import http.server,socketserver,os;os.chdir('/Users/louisportal/Desktop/Website/consulaires2026');socketserver.TCPServer(('',8080),http.server.SimpleHTTPRequestHandler).serve_forever()"],
       "port": 8080
     }
   ]

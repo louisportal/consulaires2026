@@ -275,13 +275,12 @@ section {
 }
 
 .toggle-icon {
-    font-size: 1.8em;
     transition: transform 0.3s ease;
-    font-weight: 600;
-    font-family: Helvetica, Arial, sans-serif;
-    letter-spacing: 0.1em;
     grid-column: 2;
     grid-row: 1;
+    display: flex;
+    align-items: center;
+    color: #23a9c6;
 }
 
 .toggle-icon.open {
