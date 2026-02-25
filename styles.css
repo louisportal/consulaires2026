@@ -112,6 +112,29 @@ main {
     flex: 1;
 }
 
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 30px 20px 20px;
+    margin-bottom: 25px;
+}
+
+.hero-headline {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #032149;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.hero-subtitle {
+    font-size: 1.05em;
+    color: #555;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 /* Sections */
 section {
     background: #faf7f6;
@@ -149,6 +172,11 @@ section {
     border-left-width: 6px;
 }
 
+/* Card icons */
+.card-icon {
+    margin-bottom: 12px;
+}
+
 .urgent-badge {
     display: inline-block;
     background: #ff4757;
@@ -159,6 +187,15 @@ section {
     font-weight: 600;
     margin-bottom: 8px;
     line-height: 1.4;
+}
+
+/* Countdown */
+.countdown {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #ff4757;
+    margin: 6px 0 8px;
+    letter-spacing: 1px;
 }
 
 .date-value-row {
@@ -230,6 +267,7 @@ section {
     padding: 10px 0;
     cursor: pointer;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     transition: color 0.3s ease;
@@ -244,6 +282,15 @@ section {
     margin: 0;
     font-size: 1.4em;
     font-weight: 600;
+    flex: 1;
+}
+
+.section-teaser {
+    width: 100%;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 4px;
+    font-style: italic;
 }
 
 .toggle-icon {
@@ -266,6 +313,37 @@ section {
 .section-content.open {
     display: block;
     padding: 20px 0;
+}
+
+/* Stat Cards */
+.stat-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.stat-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-top: 3px solid #23a9c6;
+}
+
+.stat-number {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #032149;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 4px;
 }
 
 /* About Grid (legacy, kept for other uses) */
@@ -338,21 +416,94 @@ section {
     border-radius: 8px;
 }
 
+/* FAQ Section */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #032149;
+    transition: background 0.2s ease;
+    gap: 12px;
+}
+
+.faq-question:hover {
+    background: rgba(35, 169, 198, 0.05);
+}
+
+.faq-toggle {
+    font-size: 1.4em;
+    font-weight: 300;
+    color: #23a9c6;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.open .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 20px 16px;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+.faq-answer p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 0.95em;
+}
+
 /* Footer */
 footer {
-    background: #faf7f6;
-    border-top: 3px solid #23a9c6;
-    padding: 15px 20px;
-    text-align: center;
-    color: #032149;
+    background: #032149;
+    color: #fff;
+    padding: 0;
     margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-links h3,
+.footer-social h3 {
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #23a9c6;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .footer-actions {
     display: flex;
-    gap: 15px;
-    justify-content: center;
-    padding: 25px 20px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
@@ -362,38 +513,68 @@ footer {
     justify-content: center;
     gap: 8px;
     background: transparent;
-    color: #23a9c6;
-    padding: 10px 16px;
-    border-radius: 8px;
+    color: #ccc;
+    padding: 8px 14px;
+    border-radius: 6px;
     text-decoration: none;
-    font-size: 0.95em;
-    font-weight: 600;
-    transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
-    border: 2px solid #23a9c6;
-    height: 42px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    height: auto;
 }
 
 .footer-btn:hover {
-    background: rgba(35, 169, 198, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+    background: #23a9c6;
+    color: #fff;
     transform: translateY(-2px);
-    border-color: #1a8ba3;
 }
 
-footer p {
-    margin: 4px 0;
-    font-size: 0.9em;
-    color: #555;
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 15px 20px;
 }
 
-footer a {
-    color: #032149;
-    text-decoration: underline;
+.footer-bottom p {
+    margin: 2px 0;
+    font-size: 0.85em;
+    color: #999;
+}
+
+.footer-bottom a {
+    color: #23a9c6;
+    text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
-footer a:hover {
-    color: #23a9c6;
+.footer-bottom a:hover {
+    color: #fff;
 }
 
 /* Responsive */
@@ -401,11 +582,15 @@ footer a:hover {
     .dates-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .stat-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
     body {
-        padding-top: 120px;
+        padding-top: 100px;
         padding-bottom: 0;
     }
 
@@ -443,8 +628,26 @@ footer a:hover {
         padding: 20px 15px;
     }
 
+    .hero-section {
+        padding: 20px 10px 15px;
+    }
+
+    .hero-headline {
+        font-size: 1.4em;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95em;
+    }
+
     .dates-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Condense blocks 2+3 on mobile */
+    .dates-grid .date-card:nth-child(2),
+    .dates-grid .date-card:nth-child(3) {
+        padding: 15px;
     }
 
     .about-grid {
@@ -452,7 +655,7 @@ footer a:hover {
         gap: 25px;
     }
 
-    .float-photo {
+    .profile-photo.float-photo {
         float: none;
         display: block;
         width: 80%;
@@ -460,14 +663,28 @@ footer a:hover {
         margin: 0 auto 20px auto;
     }
 
+    .stat-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .stat-number {
+        font-size: 1.5em;
+    }
+
     .section-content.open {
         padding: 15px 0;
     }
 
-    .footer-actions {
+    .footer-content {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-actions {
+        justify-content: center;
     }
 
     .footer-btn {
@@ -475,15 +692,14 @@ footer a:hover {
         max-width: 300px;
     }
 
-    footer p {
-        font-size: 0.85em;
-        margin: 2px 0;
+    .social-links {
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
     body {
-        padding-top: 220px;
+        padding-top: 120px;
     }
 
     .nav-title {
@@ -498,6 +714,10 @@ footer a:hover {
     .nav-cta-secondary {
         font-size: 0.9em;
         padding: 8px 14px;
+    }
+
+    .hero-headline {
+        font-size: 1.2em;
     }
 
     .footer-btn {
@@ -525,5 +745,22 @@ footer a:hover {
     .date-value,
     .date-value-detail {
         font-size: 1.1em;
+    }
+
+    .stat-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-number {
+        font-size: 1.3em;
+    }
+
+    .stat-label {
+        font-size: 0.8em;
+    }
+
+    .faq-question {
+        padding: 14px 16px;
+        font-size: 0.95em;
     }
 }
