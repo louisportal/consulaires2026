@@ -267,13 +267,24 @@ section {
     padding: 20px 0;
 }
 
-/* About Grid */
+/* About Grid (legacy, kept for other uses) */
 .about-grid {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 40px;
     align-items: start;
     margin-top: 30px;
+}
+
+/* Float layout for text wrapping around image */
+.about-content-float {
+    margin-top: 30px;
+}
+
+.float-photo {
+    float: left;
+    width: 300px;
+    margin: 0 40px 20px 0;
 }
 
 .about-content p {
@@ -438,6 +449,12 @@ footer a:hover {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 25px;
+    }
+
+    .float-photo {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
     }
 
     .section-content.open {
