@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "site",
-      "runtimeExecutable": "/usr/bin/python3",
+      "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8080", "-d", "/Users/louisportal/Desktop/Website/consulaires2026"],
       "port": 8080
     }
