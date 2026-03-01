@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "site",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-c", "import http.server,socketserver,os;os.chdir('/Users/louisportal/Desktop/Website/consulaires2026');socketserver.TCPServer(('',8080),http.server.SimpleHTTPRequestHandler).serve_forever()"],
+      "runtimeExecutable": "/usr/bin/python3",
+      "runtimeArgs": ["-m", "http.server", "8080", "-d", "/Users/louisportal/Desktop/Website/consulaires2026"],
       "port": 8080
     }
   ]
