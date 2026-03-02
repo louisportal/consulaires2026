@@ -6,6 +6,8 @@
     <title>Élections Consulaires 2026</title>
     <meta name="description" content="Inscrivez-vous pour voter à l'étranger en 2026 et après!">
     <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
       function loadGA() {
         if (document.getElementById('ga-script')) return;
         var s = document.createElement('script');
@@ -13,8 +15,6 @@
         s.async = true;
         s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DMMQMXXW6G';
         document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-DMMQMXXW6G');
       }
