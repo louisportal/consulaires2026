@@ -16,71 +16,7 @@ body {
     flex-direction: column;
 }
 
-/* Fixed Header Navigation */
-.fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #faf7f6;
-    border-bottom: 3px solid #23a9c6;
-    z-index: 1000;
-    padding: 15px 20px;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-left {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.nav-title {
-    font-size: 1.3em;
-    font-weight: 600;
-    color: #032149;
-    margin: 0;
-}
-
-.nav-subtitle {
-    font-size: 0.8em;
-    color: #555;
-    margin: 0;
-}
-
-.nav-actions {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-}
-
-.nav-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #23a9c6;
-    color: #faf7f6;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 0.95em;
-    font-weight: 600;
-    transition: background 0.3s ease, transform 0.2s ease;
-    border: 2px solid #23a9c6;
-    height: 42px;
-}
-
-.nav-cta:hover {
-    background: #1a8ba3;
-    transform: translateY(-2px);
-}
+/* Old fixed-header nav removed — using .header from styles.css */
 
 
 main {
@@ -357,27 +293,7 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Lightbox */
-.lightbox-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
-    z-index: 10000;
-    cursor: pointer;
-}
-
-.lightbox-img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 8px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-}
+/* Lightbox — using styles.css lightbox rules */
 
 
 /* FAQ Section */
@@ -524,35 +440,6 @@ section {
         padding-bottom: 0;
     }
 
-    .nav-container {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .nav-left {
-        align-items: center;
-    }
-
-    .nav-title {
-        font-size: 1.1em;
-    }
-
-    .nav-subtitle {
-        font-size: 0.75em;
-    }
-
-    .nav-actions {
-        flex-direction: column;
-        width: 100%;
-        gap: 8px;
-    }
-
-    .nav-cta {
-        width: 100%;
-        max-width: 300px;
-    }
-
     main {
         padding: 20px 15px;
     }
@@ -611,10 +498,6 @@ section {
         justify-content: center;
     }
 
-    .footer-btn {
-        width: 100%;
-        max-width: 300px;
-    }
 
     .cookie-banner {
         flex-direction: column;
@@ -634,26 +517,8 @@ section {
         padding-top: 0;
     }
 
-    .nav-title {
-        font-size: 1em;
-    }
-
-    .nav-subtitle {
-        font-size: 0.7em;
-    }
-
-    .nav-cta {
-        font-size: 0.9em;
-        padding: 8px 14px;
-    }
-
     .hero-headline {
         font-size: 1.2em;
-    }
-
-    .footer-btn {
-        font-size: 0.9em;
-        padding: 8px 14px;
     }
 
     .section-header h2 {

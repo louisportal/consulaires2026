@@ -63,13 +63,6 @@ body {
 }
 
 /* About Section with Photo */
-.about-grid {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 30px;
-    align-items: start;
-    margin-top: 30px;
-}
 
 .profile-photo {
     width: 100%;
@@ -93,12 +86,6 @@ body {
 
 .about-content-float {
     margin-top: 30px;
-}
-
-.profile-photo.float-photo {
-    float: left;
-    width: 350px;
-    margin: 0 30px 20px 0;
 }
 
 /* Stat Cards */
@@ -292,7 +279,6 @@ a.priority-card:hover {
     margin-top: 20px;
 }
 
-
 /* Footer */
 footer {
     background: #faf7f6;
@@ -314,62 +300,7 @@ footer a:hover {
 /* ============================= */
 /* Photo Grid (Bento Box)         */
 /* ============================= */
-.photo-grid {
-    column-count: 4;
-    column-gap: 12px;
-}
-
-.photo-grid-item {
-    break-inside: avoid;
-    margin-bottom: 12px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.photo-grid-item .grid-photo {
-    width: 100%;
-    display: block;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.photo-grid-item:hover .grid-photo {
-    transform: scale(1.03);
-}
-
-.photo-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 12px;
-    background: linear-gradient(transparent, rgba(3, 33, 73, 0.8));
-    border-radius: 0 0 8px 8px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.photo-grid-item:hover .photo-overlay {
-    opacity: 1;
-}
-
-.photo-date {
-    font-size: 0.75em;
-    font-weight: 600;
-    color: #23a9c6;
-}
-
-.photo-title {
-    font-size: 0.85em;
-    font-weight: 600;
-    color: #ffffff;
-    line-height: 1.3;
-}
+/* Photo gallery styles removed — not used on consulaires2026 */
 
 /* Year collapsible sections */
 .year-section {
@@ -380,15 +311,23 @@ footer a:hover {
 }
 
 .year-header {
-    background: transparent;
+    background: #f0f4f8;
     color: #032149;
-    padding: 10px 0;
+    padding: 18px 24px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: color 0.3s ease;
-    border-bottom: 2px solid #23a9c6;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    border-left: 4px solid #23a9c6;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.year-header:hover {
+    background: #e4ecf4;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .year-label {
@@ -398,15 +337,15 @@ footer a:hover {
 
 /* Bleu-Blanc-Rouge cycling for year sections */
 .year-section:nth-child(3n+1) .year-label { color: #002654; }
-.year-section:nth-child(3n+1) .year-header { border-bottom-color: #002654; }
+.year-section:nth-child(3n+1) .year-header { border-left-color: #002654; }
 .year-section:nth-child(3n+1) .year-toggle { color: #002654; }
 
 .year-section:nth-child(3n+2) .year-label { color: #8D8D8D; }
-.year-section:nth-child(3n+2) .year-header { border-bottom-color: #8D8D8D; }
+.year-section:nth-child(3n+2) .year-header { border-left-color: #8D8D8D; }
 .year-section:nth-child(3n+2) .year-toggle { color: #8D8D8D; }
 
 .year-section:nth-child(3n) .year-label { color: #CE1126; }
-.year-section:nth-child(3n) .year-header { border-bottom-color: #CE1126; }
+.year-section:nth-child(3n) .year-header { border-left-color: #CE1126; }
 .year-section:nth-child(3n) .year-toggle { color: #CE1126; }
 
 .year-toggle {
@@ -432,9 +371,6 @@ footer a:hover {
 
 /* Mobile: overlay always visible (no hover on touch) */
 @media (hover: none) {
-    .photo-overlay {
-        opacity: 1;
-    }
 }
 
 /* ============================= */
@@ -711,71 +647,7 @@ footer a:hover {
     border-bottom: none;
 }
 
-/* Language Switcher (flag dropdown) */
-.lang-switcher {
-    position: relative;
-}
-
-.lang-switcher-toggle {
-    font-size: 0.85em;
-    background: none;
-    border: 2px solid #23a9c6;
-    color: #23a9c6;
-    cursor: pointer;
-    padding: 10px 16px;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-    font-weight: 600;
-    height: 42px;
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.lang-switcher-toggle:hover {
-    background: #23a9c6;
-    color: #faf7f6;
-}
-
-.lang-switcher-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    margin-top: 6px;
-    background: #faf7f6;
-    border: 2px solid #032149;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    padding: 6px;
-    flex-direction: column;
-    gap: 2px;
-    z-index: 200;
-}
-
-.lang-switcher-menu.open {
-    display: flex;
-}
-
-.lang-switcher-menu a {
-    font-size: 0.9em;
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: all 0.15s ease;
-    line-height: 1;
-    text-align: center;
-    color: #032149;
-    width: auto;
-    font-weight: 600;
-}
-
-.lang-switcher-menu a:hover {
-    background: #032149;
-    color: #faf7f6;
-}
-
+/* Language switcher removed — consulaires2026 is French only */
 
 /* ============================= */
 /* Links Grid (Liens Utiles)      */
@@ -900,17 +772,6 @@ footer a:hover {
         width: 18px;
     }
 
-    /* Language switcher */
-    .lang-switcher {
-        flex-shrink: 0;
-    }
-
-    .lang-switcher-toggle {
-        font-size: 0.75em;
-        padding: 8px 12px;
-        height: 44px;
-    }
-
     .nav-menu {
         min-width: 200px;
         left: 0;
@@ -976,10 +837,6 @@ footer a:hover {
         flex: 0 0 0;
     }
 
-    .header.scrolled .lang-switcher {
-        display: none;
-    }
-
     .header.scrolled .header-content {
         justify-content: space-between;
         align-items: center;
@@ -1000,11 +857,6 @@ footer a:hover {
         justify-content: flex-end;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
     .profile-photo {
         max-width: 250px;
         margin: 0 auto;
@@ -1019,10 +871,6 @@ footer a:hover {
     .info-grid.two-col {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-
-    .photo-grid {
-        column-count: 3;
     }
 
     .logo-grid {
@@ -1053,14 +901,6 @@ footer a:hover {
 
     .year-label {
         font-size: 1.3em;
-    }
-
-    .profile-photo.float-photo {
-        float: none;
-        display: block;
-        width: 80%;
-        max-width: 350px;
-        margin: 0 auto 20px auto;
     }
 
     .stat-cards {
@@ -1110,12 +950,6 @@ footer a:hover {
         height: 42px;
     }
 
-    .lang-switcher-toggle {
-        font-size: 0.7em;
-        padding: 8px 10px;
-        height: 42px;
-    }
-
     .nav-link {
         padding: 12px 16px;
         font-size: 0.9em;
@@ -1151,7 +985,6 @@ footer a:hover {
         font-size: 0.95em;
         padding-left: 22px;
     }
-
 
     .links-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1205,10 +1038,6 @@ footer a:hover {
         font-size: 1.2em;
     }
 
-    .photo-grid {
-        column-count: 2;
-    }
-
     .profile-photo {
         max-width: 200px;
     }
@@ -1260,14 +1089,10 @@ footer a:hover {
 }
 
 @media (max-width: 360px) {
-    .photo-grid {
-        column-count: 1;
-    }
 
     .header-title h1 {
         font-size: 1.1em;
     }
-
 
     .team-grid .logo-image {
         width: 80px;
