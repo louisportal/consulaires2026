@@ -1425,7 +1425,7 @@ footer a:hover {
     margin-top: 40px;
     position: relative;
     background: linear-gradient(to right, #032149 0%, #23a9c6 60%, transparent 100%),
-                url('../assets/Logos/ASFE - Cover Facebook 2.png');
+                url('assets/ASFE_Cover.png');
     background-size: cover, cover;
     background-position: left center, right center;
     background-repeat: no-repeat, no-repeat;
