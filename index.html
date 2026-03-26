@@ -1,278 +1,256 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <script src="consent.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Élections Consulaires 2026</title>
-    <meta name="description" content="Inscrivez-vous pour voter à l'étranger en 2026 et après!">
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      function loadGA() {
-        if (document.getElementById('ga-script')) return;
-        var s = document.createElement('script');
-        s.id = 'ga-script';
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DMMQMXXW6G';
-        document.head.appendChild(s);
-        gtag('js', new Date());
-        gtag('config', 'G-DMMQMXXW6G');
-      }
-      if (localStorage.getItem('cookie-consent') === 'accepted') { loadGA(); }
-    </script>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Liste ASFE pour les élections consulaires 2026 - Suisse alémanique et Liechtenstein">
+    <title>Consulaires 2026 - Liste ASFE</title>
+    <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
-    <!-- Fixed Navigation Header -->
-    <nav class="fixed-header">
-        <div class="nav-container">
-            <div class="nav-left">
-                <h1 class="nav-title">Élections Consulaires 2026</h1>
-                <p class="nav-subtitle">Conseillers des Français de l'étranger & Délégués consulaires</p>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-title">
+                <h1>Liste ASFE - Élections de Mai 2026</h1>
+                <p>Conseillers des Français de l'étranger & Délégués consulaires</p>
             </div>
-            <div class="nav-actions">
-                <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R43248" target="_blank" class="nav-cta">
-                    M'inscrire pour voter
+            <span class="scrolled-title">Votez ASFE !</span>
+            <div class="header-controls">
+                <div class="hamburger-container">
+                    <button id="hamburgerBtn" class="hamburger-btn" aria-label="Menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                    <nav id="navMenu" class="nav-menu">
+                        <button class="nav-close-btn" aria-label="Fermer le menu">&times;</button>
+                        <a href="#liste" class="nav-link">La liste ASFE 2026</a>
+                        <a href="programme.html" class="nav-link">Notre Programme</a>
+                        <a href="info_vote.html" class="nav-link">Infos & Inscription</a>
+                        <a href="liens-utiles.html" class="nav-link">Liens Utiles</a>
+                        <a href="a-propos.html" class="nav-link">L'ASFE et les conseillers</a>
+                        <a href="https://louisportal.com/fr/elu_2021.html" class="nav-link nav-link-last">Mandat en cours</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- La Liste -->
+        <div id="liste">
+            <h2 style="color:#032149; font-size:1.8em; margin-bottom:5px; text-align:center;">VOTEZ ASFE !</h2>
+            <p style="color:#666; font-style:italic; margin-bottom:30px; text-align:center;">L'ASFE présente la liste la plus complète, la plus diverse et la plus compétente pour servir tous les Français de Suisse alémanique et du Liechtenstein.</p>
+                <div class="countdown-banner" id="countdownBanner">
+                    <span class="countdown-text">Plus que <strong id="countdownDays">--</strong> jours pour s'inscrire !</span>
+                    <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R43248" target="_blank" class="countdown-btn">S'inscrire pour voter</a>
+                </div>
+                <div class="logo-grid team-grid">
+                    <div class="logo-block team-member" data-name="Louis Portal" data-bio="Originaire de Bordeaux, j'ai vécu à Paris, New York puis Zurich, où je suis installé depuis 2014. Entrepreneur dans le digital et le capital-risque pendant dix ans, aujourd'hui dans le secteur aérien, je reste au contact des réalités des Français de l'étranger à travers mes voyages et mes échanges avec les élus consulaires du monde entier. Élu sous l'étiquette ASFE, je crois que l'engagement à l'étranger doit dépasser les clivages partisans et se concentrer sur les réalités locales et les besoins concrets de notre communauté. C'est pourquoi je me représente en tête de liste : représenter les Français de l'étranger est une vocation." data-elu="https://louisportal.com/fr/elu_2021.html" data-linkedin="https://www.linkedin.com/in/louis-portal-7bb22040/" data-photo="assets/Profils/1_Louis_Portal_Picture.jpg">
+                        <span class="position-badge">#1</span>
+                        <div class="logo-image">
+                            <img src="assets/Profils/1_Louis_Portal_Picture.jpg" alt="Louis Portal" />
+                        </div>
+                        <span class="logo-label">Louis Portal</span>
+                        <span class="team-role">Zurich</span>
+                        <span class="team-specialty">Élu 2021, Consulaire & ASFE</span>
+                    </div>
+                    <div class="logo-block team-member" data-name="Marie Galy-Dejean" data-bio="Ancienne avocate d'affaires au Barreau de Paris pendant 13 ans, Marie est installée à Dübendorf (ZH) depuis 2013 et très engagée dans l'éducation (Lycée Français international de Zurich, formation juridique en français). Convaincue par le travail accompli pour les Français de Suisse et du Liechtenstein durant le mandat en cours, elle souhaite construire la suite avec l'équipe. Elle rejoint l'ASFE car c'est un parti transpartisan qui représente les Français de l'étranger au-delà des clivages politiques." data-photo="assets/Profils/2_Marie_Galy_Dejean_Picture.png">
+                        <span class="position-badge">#2</span>
+                        <div class="logo-image">
+                            <img src="assets/Profils/2_Marie_Galy_Dejean_Picture.png" alt="Marie Galy-Dejean" />
+                        </div>
+                        <span class="logo-label">Marie Galy-Dejean</span>
+                        <span class="team-role">Zurich</span>
+                        <span class="team-specialty">Éducation, Communauté & Juridique</span>
+                    </div>
+                    <div class="logo-block team-member" data-name="Nourane Aleyan" data-bio="Actif dans l'industrie et président du club de football francophone de Berne, Nourane vit l'engagement collectif au quotidien. Toujours présent aux événements de la communauté française, il connaît aussi le côté administratif des affaires consulaires, notamment puisqu'il a déposé lui-même une demande de subvention STAFE. Il rejoint la liste ASFE pour construire ensemble une représentation indépendante, au-delà des étiquettes politiques, au plus près des besoins concrets." data-photo="assets/Profils/3_Nourane_Aleyan_Picture.jpeg">
+                        <span class="position-badge">#3</span>
+                        <div class="logo-image">
+                            <img src="assets/Profils/3_Nourane_Aleyan_Picture.jpeg" alt="Nourane Aleyan" />
+                        </div>
+                        <span class="logo-label">Nourane Aleyan</span>
+                        <span class="team-role">Berne</span>
+                        <span class="team-specialty">Associations, Communauté & Berne</span>
+                    </div>
+                    <div class="logo-block team-member" data-name="Elisabeth Lefebvre" data-bio="Originaire de Toulouse et installée à Zurich depuis 7 ans, Elisabeth travaille aujourd'hui comme responsable qualité dans l'industrie médicale, après plusieurs années dans l'aérospatiale. Vivant elle-même les enjeux des Français de l'étranger, responsable associative, elle s'investit pour améliorer l'information, l'accompagnement et la représentation de notre communauté. Rejoindre la liste ASFE s'est imposé comme une évidence pour construire ensemble une voix indépendante, concrète et engagée au service des expatriés." data-photo="assets/Profils/4_Elisabeth_Lefebvre_Picture.jpeg">
+                        <span class="position-badge">#4</span>
+                        <div class="logo-image">
+                            <img src="assets/Profils/4_Elisabeth_Lefebvre_Picture.jpeg" alt="Elisabeth Lefebvre" />
+                        </div>
+                        <span class="logo-label">Elisabeth Lefebvre</span>
+                        <span class="team-role">Zurich</span>
+                        <span class="team-specialty">Associations, Emploi & Communauté</span>
+                    </div>
+                    <div class="logo-block team-member" data-name="Benjamin Delahaye" data-bio="Installé à Zurich depuis 2010, Benjamin a d'abord travaillé dans l'éducation et les séjours linguistiques. Accro à la scène, il a animé la communauté francophone de Zurich avec des spectacles de stand-up en français avant de se produire en trois langues – et de faire quelques apparitions sur la SRF. Ce lien fort avec la communauté française et son ancrage multiculturel à Zurich lui donnent une vision vivante de ce qui fait le quotidien des expatriés. Il rejoint la liste ASFE pour représenter notre communauté avec énergie et bonne humeur." data-photo="assets/Profils/5_Benjamin_Delahaye_Picture.jpg">
+                        <span class="position-badge">#5</span>
+                        <div class="logo-image">
+                            <img src="assets/Profils/5_Benjamin_Delahaye_Picture.jpg" alt="Benjamin Delahaye" />
+                        </div>
+                        <span class="logo-label">Benjamin Delahaye</span>
+                        <span class="team-role">Zurich</span>
+                        <span class="team-specialty">Éducation, Communauté & Comédie</span>
+                    </div>
+                    <div class="logo-block team-member" data-name="Sophia Vinçonneau" data-bio="Installée au Liechtenstein, Sophia est hypnothérapeute et consultante en métaphysique chinoise. Expatriée depuis plus de vingt ans, elle connaît de l'intérieur les réalités et les défis de la vie à l'étranger. Au quotidien, elle accompagne des expatriés francophones, ce qui lui donne un lien privilégié avec notre communauté. Elle rejoint la liste ASFE pour porter la voix des Français du Liechtenstein, souvent peu représentés dans notre circonscription." data-photo="assets/Profils/6_Sophia_Vinçonneau_Picture.jpg">
+                        <span class="position-badge">#6</span>
+                        <div class="logo-image">
+                            <img src="assets/Profils/6_Sophia_Vinçonneau_Picture.jpg" alt="Sophia Vinçonneau" />
+                        </div>
+                        <span class="logo-label">Sophia Vinçonneau</span>
+                        <span class="team-role">Schaan 🇱🇮</span>
+                        <span class="team-specialty">Santé, Famille & Liechtenstein</span>
+                    </div>
+                    <div class="logo-block team-member" data-name="Thierry Cerclé" data-bio="Installé au Tessin sur la commune d'Agno, Thierry est engagé dans la vie publique locale suisse. Fort d'une carrière dans le secteur bancaire et d'une bonne connaissance du fonctionnement institutionnel, il apporte un regard pragmatique sur les enjeux de notre communauté. Thierry contribue depuis longtemps à coordonner les élections qui concernent les Français de Suisse dans les bureaux de vote du Tessin. Convaincu par cette dynamique collective, il est prêt à continuer à porter la voix des Français du Tessin." data-photo="assets/Profils/7_Thierry_Cercle_Picture.jpg">
+                        <span class="position-badge">#7</span>
+                        <div class="logo-image">
+                            <img src="assets/Profils/7_Thierry_Cercle_Picture.jpg" alt="Thierry Cerclé" />
+                        </div>
+                        <span class="logo-label">Thierry Cerclé</span>
+                        <span class="team-role">Lugano</span>
+                        <span class="team-specialty">Conseil communal, Emploi & Tessin</span>
+                    </div>
+                    <div class="logo-block team-member" data-name="Fabiola Jaymond" data-bio="Sur Zurich depuis plus de quinze ans, Fabiola travaille dans le secteur automobile et préside la French Tech Zurich. Au quotidien, elle crée des ponts entre la France et la Suisse au cœur de l'écosystème tech et innovation. Son parcours international et son engagement pour l'entrepreneuriat lui donnent une compréhension concrète des défis que rencontrent les Français établis en Suisse. Elle rejoint la liste ASFE pour mettre cette énergie et cette expérience au service de notre communauté." data-photo="assets/Profils/8_Fabiola_Jaymond_Picture.jpeg">
+                        <span class="position-badge">#8</span>
+                        <div class="logo-image">
+                            <img src="assets/Profils/8_Fabiola_Jaymond_Picture.jpeg" alt="Fabiola Jaymond" />
+                        </div>
+                        <span class="logo-label">Fabiola Jaymond</span>
+                        <span class="team-role">Zurich</span>
+                        <span class="team-specialty">Associations, Startups & Emploi</span>
+                    </div>
+                    <div class="logo-block team-member" data-name="Jean-Marc Lherminé" data-bio="Dans la région bernoise depuis de nombreuses années, Jean-Marc a fait carrière dans le digital et le consulting. Aujourd'hui il partage son temps entre la musique et des projets tech pour le secteur institutionnel. Il soutient la liste ASFE pour la deuxième fois, convaincu que c'est par une approche concrète et transpartisane qu'on défend le mieux les intérêts des Français de Suisse. Engagé et motivé!" data-photo="assets/Profils/9_Jean_Marc_Lhermine_Picture.jpg">
+                        <span class="position-badge">#9</span>
+                        <div class="logo-image">
+                            <img src="assets/Profils/9_Jean_Marc_Lhermine_Picture.jpg" alt="Jean-Marc Lherminé" />
+                        </div>
+                        <span class="logo-label">Jean-Marc Lherminé</span>
+                        <span class="team-role">Berne</span>
+                        <span class="team-specialty">Emploi, Retraite & Berne</span>
+                    </div>
+                    <div class="logo-block team-member" data-name="Ingrid Kobler" data-bio="Installée dans les Grisons, Ingrid préside l'association des familles francophones du canton. Très engagée pour la santé des femmes, elle connaît les besoins concrets de notre communauté au quotidien. Beaucoup de familles françaises des Grisons restent invisibles – il est temps de leur donner une voix. Elle rejoint la liste ASFE avec conviction et proximité pour porter la voix de ces familles trop souvent oubliées de notre circonscription." data-photo="assets/Profils/10_Ingrid_Kobler_Picture.jpg">
+                        <span class="position-badge">#10</span>
+                        <div class="logo-image">
+                            <img src="assets/Profils/10_Ingrid_Kobler_Picture.jpg" alt="Ingrid Kobler" />
+                        </div>
+                        <span class="logo-label">Ingrid Kobler</span>
+                        <span class="team-role">Coire</span>
+                        <span class="team-specialty">Éducation, Famille & Grisons</span>
+                    </div>
+                    <div class="logo-block team-member" data-name="Pascal Ravery" data-bio="Basé dans le canton de Zoug, Pascal est ancien cadre dirigeant du secteur bancaire. Après une brillante carrière dans la finance, il consacre aujourd'hui son temps à l'investissement, la philanthropie et à sa passion pour le monde équestre. Depuis plusieurs années, il met ses conseils et son expérience au service de l'équipe. Il poursuit l'aventure avec l'ASFE en mettant son expertise au service des Français de notre circonscription." data-photo="assets/Profils/11_Pascal_Ravery_Picture.jpg">
+                        <span class="position-badge">#11</span>
+                        <div class="logo-image">
+                            <img src="assets/Profils/11_Pascal_Ravery_Picture.jpg" alt="Pascal Ravery" />
+                        </div>
+                        <span class="logo-label">Pascal Ravery</span>
+                        <span class="team-role">Zoug</span>
+                        <span class="team-specialty">Finance, Emploi & Carrière</span>
+                    </div>
+                    <div class="logo-block team-member" data-name="Déborah Schiestel" data-bio="Déborah travaille dans l'industrie pharmaceutique – un secteur au cœur de l'identité de la région de Bâle, qu'elle habite. Elle se représente sur la liste ASFE, après un premier mandat qui a renforcé sa conviction que la proximité et la bienveillance font la différence. Forte de son parcours international et de son expérience dans la pharma, elle accompagne volontiers les Français de la région sur les questions de carrière et de mobilité. Toujours présente et à l'écoute, elle est prête à continuer à servir notre communauté avec engagement." data-photo="assets/Profils/12_Deborah_Schiestel_Picture.jpeg">
+                        <span class="position-badge">#12</span>
+                        <div class="logo-image">
+                            <img src="assets/Profils/12_Deborah_Schiestel_Picture.jpeg" alt="Déborah Schiestel" />
+                        </div>
+                        <span class="logo-label">Déborah Schiestel</span>
+                        <span class="team-role">Bâle</span>
+                        <span class="team-specialty">Pharma, Emploi & Bâle</span>
+                    </div>
+                </div>
+
+                <div class="register-reminder">
+                    <p>Inscription sur la LEC jusqu'au 24 avril 2026</p>
+                    <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R43248" target="_blank" class="election-btn">S'inscrire pour voter</a>
+                    <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R51788" target="_blank" class="election-btn election-btn-outline" style="margin-top: 10px;">Vérifier ma situation</a>
+                </div>
+
+                <div class="vote-section">
+                    <h3>Modalités de vote</h3>
+                    <ul class="vote-list">
+                        <li class="vote-list-item">
+                            Inscrivez-vous sur la Liste Electorale Consulaire (LEC) jusqu'au 24 Avril 2026 <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R43248" target="_blank" style="text-decoration:none; font-weight:bold; color:white;">&#10132;</a>
+                        </li>
+                        <li class="vote-list-item">
+                            Vote par procuration possible <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F34852/3_1" target="_blank" style="text-decoration:none; font-weight:bold; color:white;">&#10132;</a>
+                        </li>
+                        <li class="vote-list-item">
+                            Vote électronique en ligne du 22 au 27 Mai 2026
+                        </li>
+                        <li class="vote-list-item">
+                            Vote à l'urne le 31 Mai 2026 au Consulat Général de France à Zürich
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="section-separator">
+            <p>Tout sur notre action</p>
+        </div>
+
+        <div class="info-grid two-col" style="margin-top:20px;">
+            <a href="programme.html" class="priority-card has-icon" style="text-decoration:none; background:#032149; color:#faf7f6; width:100%; box-sizing:border-box;">
+                <h3 style="color:#23a9c6; margin-bottom:15px; font-size:1.2em;">Notre Programme &#10132;</h3>
+                <p>Nos priorités pour les Français de Suisse alémanique et du Liechtenstein.</p>
+                <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2zm0-4H7V7h10v2z"/></svg></span>
+            </a>
+            <a href="https://louisportal.com/fr/elu_2021.html" class="priority-card has-icon" style="text-decoration:none; background:#032149; color:#faf7f6; width:100%; box-sizing:border-box;">
+                <h3 style="color:#23a9c6; margin-bottom:15px; font-size:1.2em;">Mandat en cours &#10132;</h3>
+                <p>Découvrez notre activité consulaire depuis 2021.</p>
+                <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 0h-4V4h4v2z"/></svg></span>
+            </a>
+            <a href="info_vote.html" class="priority-card has-icon" style="text-decoration:none; background:#032149; color:#faf7f6; width:100%; box-sizing:border-box;">
+                <h3 style="color:#23a9c6; margin-bottom:15px; font-size:1.2em;">Infos & Inscription &#10132;</h3>
+                <p>Dates, inscription, vote électronique et FAQ sur les élections consulaires.</p>
+                <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></span>
+            </a>
+            <a href="liens-utiles.html" class="priority-card has-icon" style="text-decoration:none; background:#032149; color:#faf7f6; width:100%; box-sizing:border-box;">
+                <h3 style="color:#23a9c6; margin-bottom:15px; font-size:1.2em;">Liens Utiles &#10132;</h3>
+                <p>Retrouvez tous nos liens web, Facebook et Instagram.</p>
+                <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></span>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section" data-include="contact.html">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 – ASFE - Liste Consulaires 2026. Suisse alémanique & Liechtenstein.</p>
+        <p style="margin-top: 10px;">
+            <a href="https://alliancesolidaire.org" target="_blank">Alliance Solidaire</a>
+        </p>
+    </footer>
+
+    <!-- Bio Popup -->
+    <div id="bioPopup" class="bio-popup-overlay">
+        <div class="bio-popup-content">
+            <button class="bio-popup-close" aria-label="Close">&times;</button>
+            <img id="bioPhoto" src="" alt="" class="bio-popup-photo" />
+            <h3 id="bioName" class="bio-popup-name"></h3>
+            <p id="bioBio" class="bio-popup-bio"></p>
+            <div class="bio-popup-buttons">
+                <a id="bioElu" href="" class="bio-popup-btn bio-popup-btn-elu">Mandat en cours &rarr;</a>
+                <a id="bioLinkedin" href="" target="_blank" rel="noopener noreferrer" class="bio-popup-btn bio-popup-btn-linkedin">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
                 </a>
             </div>
         </div>
-    </nav>
-
-    <main>
-        <!-- Hero intro -->
-        <section class="hero-section">
-            <h2 class="hero-headline">Vous vivez à l'étranger ? Votez pour vos représentants en mai 2026 !</h2>
-            <p class="hero-subtitle">Les élections des conseillers des Français de l'étranger et des délégués consulaires permettent d'élire vos représentants auprès des consulats, et parmi eux les membres de l'Assemblée des Français de l'étranger.</p>
-        </section>
-
-        <!-- Dates importantes -->
-        <section class="dates-section">
-            <div class="dates-grid">
-                <div class="date-card urgent">
-                    <div class="card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff4757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    </div>
-                    <div class="urgent-badge">Pour voter, inscrivez-vous sur la Liste Électorale Consulaire (LEC) jusqu'au 24 avril</div>
-                    <div class="countdown" id="countdown"></div>
-                    <div class="date-label">Cliquez sur le lien pour vous inscrire</div>
-                    <div class="date-value-row">
-                        <div class="date-value">Je m'inscris maintenant</div>
-                        <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R43248" target="_blank" class="urgent-cta-btn" aria-label="M'inscrire maintenant">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 5l5 5-5 5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="date-card">
-                    <div class="card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#23a9c6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <div class="date-label">Vous pouvez voter par procuration</div>
-                    <div class="date-value-row">
-                        <div class="date-value">Établir ma procuration</div>
-                        <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F34852/3_1" target="_blank" class="urgent-cta-btn" aria-label="Faire une procuration">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M12 5l5 5-5 5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="date-card">
-                    <div class="card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#23a9c6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                    </div>
-                    <div class="date-label">Vote électronique</div>
-                    <div class="date-value">22-27 mai</div>
-                    <div class="date-label" style="margin-top: 10px;">Vote à l'urne</div>
-                    <div class="date-value-detail"><strong>30 mai</strong> : continent américain et Caraïbes</div>
-                    <div class="date-value-detail"><strong>31 mai</strong> : reste du monde</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section CFE Description (ouverte par défaut) -->
-        <div class="collapsible-section" id="cfe">
-            <div class="section-header" onclick="toggleSection(this)">
-                <h2>Conseiller des Français de l'Étranger</h2>
-                <p class="section-teaser">Découvrez qui sont vos élus de proximité et leur rôle au quotidien</p>
-                <span class="toggle-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polyline points="4,7 10,13 16,7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            </div>
-            <div class="section-content" data-include="cfe-description.html">
-            </div>
-        </div>
-
-        <!-- Section Le poids de l'ASFE -->
-        <div class="collapsible-section" id="asfe">
-            <div class="section-header" onclick="toggleSection(this)">
-                <h2>Le poids de l'ASFE : un acteur incontournable</h2>
-                <p class="section-teaser">Un parti transpartisan dédié aux Français de l'étranger</p>
-                <span class="toggle-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polyline points="4,7 10,13 16,7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            </div>
-            <div class="section-content" data-include="asfe-poids.html">
-            </div>
-        </div>
-
-        <!-- FAQ Section -->
-        <div class="collapsible-section" id="faq">
-            <div class="section-header" onclick="toggleSection(this)">
-                <h2>Questions fréquentes</h2>
-                <p class="section-teaser">Tout savoir sur l'inscription et le vote depuis l'étranger</p>
-                <span class="toggle-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polyline points="4,7 10,13 16,7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            </div>
-            <div class="section-content" id="faq-content">
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                            <span>Dois-je m'inscrire si je suis déjà sur la Liste Électorale Consulaire ?</span>
-                            <span class="faq-toggle">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Si vous êtes déjà inscrit sur la Liste Électorale Consulaire (LEC) et que vos coordonnées n'ont pas changé, vous n'avez pas besoin de vous réinscrire. En revanche, si vous avez déménagé ou changé de circonscription consulaire, vous devez mettre à jour votre inscription avant le 24 avril.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                            <span>Puis-je voter depuis n'importe quel pays ?</span>
-                            <span class="faq-toggle">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Oui, tout Français inscrit sur la LEC peut voter, quelle que soit sa localisation. Le vote électronique est accessible depuis n'importe où dans le monde entre le 22 et le 27 mai. Le vote à l'urne a lieu dans votre bureau de vote consulaire les 30 ou 31 mai selon votre zone géographique.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                            <span>Comment fonctionne le vote électronique ?</span>
-                            <span class="faq-toggle">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Le vote électronique se fait via une plateforme sécurisée accessible depuis un ordinateur ou un smartphone. Vous recevrez vos identifiants de connexion par courrier électronique et/ou SMS avant l'ouverture du scrutin. Le système garantit le secret du vote et l'intégrité des résultats.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                            <span>Quelle est la différence entre un conseiller des Français de l'étranger et un délégué consulaire ?</span>
-                            <span class="faq-toggle">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Les conseillers des Français de l'étranger siègent au conseil consulaire et peuvent être élus à l'Assemblée des Français de l'étranger (AFE). Les délégués consulaires sont élus dans les mêmes conditions mais ont un rôle plus limité : ils participent uniquement à l'élection des sénateurs des Français de l'étranger en tant que grands électeurs.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
+    </div>
 
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox-overlay">
         <img id="lightbox-img" src="" alt="" class="lightbox-img" />
     </div>
-
-    <script>
-        function toggleSection(header) {
-            const content = header.nextElementSibling;
-            const icon = header.querySelector('.toggle-icon');
-            content.classList.toggle('open');
-            icon.classList.toggle('open');
-        }
-
-        // Load shared HTML fragments (data-include="filename.html")
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('[data-include]').forEach(function(el) {
-                var file = el.getAttribute('data-include');
-                fetch(file)
-                    .then(function(response) { return response.text(); })
-                    .then(function(html) {
-                        el.innerHTML = html;
-                    })
-                    .catch(function(err) {
-                        console.warn('Could not load ' + file, err);
-                    });
-            });
-
-            // Countdown to April 24, 2026
-            var deadline = new Date('2026-04-24T23:59:59');
-            function updateCountdown() {
-                var now = new Date();
-                var diff = deadline - now;
-                if (diff <= 0) {
-                    document.getElementById('countdown').textContent = 'Date limite dépassée';
-                    return;
-                }
-                var days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-                document.getElementById('countdown').textContent = 'J-' + days;
-            }
-            updateCountdown();
-            setInterval(updateCountdown, 60000);
-        });
-
-        // Close lightbox when clicking outside the image
-        document.getElementById('lightbox').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.style.display = 'none';
-            }
-        });
-    </script>
-
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-consent" class="cookie-banner" style="display:none;">
-        <p class="cookie-text">Accepter les cookies 🍪 ?</p>
-        <div class="cookie-actions">
-            <button id="cookie-accept" class="cookie-btn cookie-accept">Accepter</button>
-            <button id="cookie-refuse" class="cookie-btn cookie-refuse">Refuser</button>
-        </div>
-    </div>
-
-    <script>
-        (function() {
-            var consent = localStorage.getItem('cookie-consent');
-            if (!consent) {
-                document.getElementById('cookie-consent').style.display = '';
-            }
-            document.getElementById('cookie-accept').addEventListener('click', function() {
-                localStorage.setItem('cookie-consent', 'accepted');
-                document.getElementById('cookie-consent').style.display = 'none';
-                loadGA();
-            });
-            document.getElementById('cookie-refuse').addEventListener('click', function() {
-                localStorage.setItem('cookie-consent', 'refused');
-                document.getElementById('cookie-consent').style.display = 'none';
-            });
-        })();
-    </script>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <h3>Liens utiles</h3>
-                <div class="footer-actions">
-                    <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R51788" target="_blank" class="footer-btn">
-                        <svg style="width:18px; height:18px;" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd"></path>
-                        </svg>
-                        Vérifier ma situation
-                    </a>
-                    <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F16904" target="_blank" class="footer-btn">
-                        <svg style="width:18px; height:18px;" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
-                        </svg>
-                        Vote à l'étranger
-                    </a>
-                    <a href="https://www.diplomatie.gouv.fr/fr/services-aux-francais/elections-a-l-etranger/elections-des-conseillers-des-francais-de-l-etranger-et-des-delegues/" target="_blank" class="footer-btn">
-                        <svg style="width:18px; height:18px;" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.497-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"></path>
-                        </svg>
-                        France Diplomatie
-                    </a>
-                    <a href="https://www.facebook.com/AllianceSolidairedesFrancaisdelEtranger" target="_blank" class="footer-btn">
-                        <svg style="width:18px; height:18px;" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        ASFE sur Facebook
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>ASFE - Alliance Solidaire des Français de l'Étranger</p>
-            <p><a href="https://alliancesolidaire.org" target="_blank">alliancesolidaire.org</a></p>
-        </div>
-    </footer>
+    <a class="whatsapp-share" id="whatsappShare" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Partager
+    </a>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
