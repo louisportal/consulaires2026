@@ -1,6 +1,8 @@
 import http.server, socketserver, os, sys
-os.chdir('/Users/louisportal/Desktop/Website/consulaires2026')
+
+port = int(os.environ.get('PORT', 8080))
+os.chdir('/Users/louisportal/Desktop/Websites/consulaires2026')
 handler = http.server.SimpleHTTPRequestHandler
-with socketserver.TCPServer(("", 8080), handler) as httpd:
-    print(f"Serving on port 8080", flush=True)
+with socketserver.TCPServer(("", port), handler) as httpd:
+    print(f"Serving on port {port}", flush=True)
     httpd.serve_forever()

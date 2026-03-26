@@ -151,8 +151,8 @@ section {
     border-left-width: 6px;
 }
 
-/* Card icons */
-.card-icon {
+/* Card icons (scoped to date cards to avoid conflict with priority-card icons) */
+.date-card > .card-icon {
     margin-bottom: 12px;
 }
 

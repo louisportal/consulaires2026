@@ -3,9 +3,10 @@
   "configurations": [
     {
       "name": "site",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "8081", "-s"],
-      "port": 8081
+      "runtimeExecutable": "/opt/homebrew/bin/python3",
+      "runtimeArgs": ["/Users/louisportal/Desktop/Websites/consulaires2026/.claude/serve.py"],
+      "port": 8080,
+      "autoPort": true
     }
   ]
 }
