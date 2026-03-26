@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import http.server, socketserver, os, sys
 
 port = int(os.environ.get('PORT', 8080))
