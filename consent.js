@@ -1,5 +1,5 @@
 (function() {
-    var GA_ID = 'G-PXLJJHGL5J';
+    var GA_ID = 'G-DMMQMXXW6G';
 
     var translations = {
         fr: { text: 'Accepter les cookies \uD83C\uDF6A ?', accept: 'Accepter', decline: 'Refuser' },
