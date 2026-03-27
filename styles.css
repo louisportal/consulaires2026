@@ -647,7 +647,65 @@ footer a:hover {
     border-bottom: none;
 }
 
-/* Language switcher removed — consulaires2026 is French only */
+/* Language Switcher (flag dropdown) */
+.lang-switcher {
+    position: relative;
+}
+
+.lang-switcher-toggle {
+    font-size: 0.85em;
+    background: none;
+    border: 2px solid #23a9c6;
+    color: #23a9c6;
+    cursor: pointer;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    height: 42px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-switcher-toggle:hover {
+    background: #23a9c6;
+    color: #faf7f6;
+}
+
+.lang-switcher-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 6px;
+    background: #faf7f6;
+    border: 2px solid #032149;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 6px;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 200;
+}
+
+.lang-switcher-menu.open {
+    display: flex;
+}
+
+.lang-switcher-menu a {
+    font-size: 0.9em;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+    line-height: 1;
+    text-align: center;
+    color: #032149;
+    width: auto;
+    font-weight: 600;
+}
 
 /* ============================= */
 /* Links Grid (Liens Utiles)      */
