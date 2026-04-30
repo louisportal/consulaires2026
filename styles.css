@@ -62,6 +62,35 @@ body {
     padding: 40px 20px;
 }
 
+/* Event banner (welcome banner above the list) */
+.event-banner {
+    display: block;
+    margin: 0 auto 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    max-width: 900px;
+}
+
+.event-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.event-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .event-banner {
+        max-width: 480px;
+        margin-bottom: 24px;
+    }
+}
+
 /* About Section with Photo */
 
 .profile-photo {
