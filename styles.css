@@ -1738,60 +1738,60 @@ footer a:hover {
     }
 }
 
-/* Mini "Interview" link in the nav menu */
-.nav-link-press {
-    display: flex;
+/* Header "Interview" button (left of language switcher) */
+.press-btn {
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 14px;
-    margin: 8px 12px;
-    background: rgba(35, 169, 198, 0.1);
-    border: 1px solid rgba(35, 169, 198, 0.4);
-    border-radius: 999px;
+    justify-content: center;
+    gap: 6px;
+    height: 42px;
+    padding: 0 12px;
+    border: 2px solid #23a9c6;
+    border-radius: 8px;
+    background: rgba(35, 169, 198, 0.08);
     color: #23a9c6;
     text-decoration: none;
-    font-size: 0.85em;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    font-size: 0.8em;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    box-sizing: border-box;
     transition: background 0.2s ease, color 0.2s ease;
-    align-self: flex-start;
+    flex-shrink: 0;
 }
 
-.nav-link-press:hover {
+.press-btn:hover {
     background: #23a9c6;
     color: #faf7f6;
 }
 
-.nav-link-press svg {
+.press-btn svg {
     width: 16px;
     height: 16px;
     fill: currentColor;
     flex-shrink: 0;
 }
 
-.nav-link-press-badge {
-    font-size: 0.7em;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    opacity: 0.75;
+.press-btn-label {
+    display: inline;
 }
 
 @media (max-width: 768px) {
-    .nav-menu .nav-link-press {
-        align-self: center;
-        margin: 8px auto 16px;
-        background: rgba(35, 169, 198, 0.18);
-        border-color: rgba(35, 169, 198, 0.5);
-        color: #23a9c6;
-        font-size: 0.95em;
-        padding: 12px 20px;
+    .press-btn {
+        height: 44px;
+        padding: 0 10px;
+        font-size: 0.75em;
     }
-    .nav-menu .nav-link-press:hover {
-        background: #23a9c6;
-        color: #faf7f6;
+}
+
+@media (max-width: 480px) {
+    .press-btn {
+        padding: 0 9px;
     }
-    .nav-menu .nav-link-press svg {
+    .press-btn-label {
+        display: none;
+    }
+    .press-btn svg {
         width: 18px;
         height: 18px;
     }
