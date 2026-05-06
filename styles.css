@@ -1634,3 +1634,165 @@ footer a:hover {
         font-size: 0.85em;
     }
 }
+
+/* Press / Interview card (programme page) */
+.press-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    margin: 30px 0 10px;
+    background: #faf7f6;
+    border: 1px solid rgba(35, 169, 198, 0.3);
+    border-left: 5px solid #23a9c6;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #032149;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.press-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: #23a9c6;
+}
+
+.press-card-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(35, 169, 198, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.press-card-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: #23a9c6;
+}
+
+.press-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.press-card-eyebrow {
+    display: block;
+    font-size: 0.72em;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #23a9c6;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.press-card-title {
+    display: block;
+    font-size: 1.15em;
+    font-weight: 700;
+    color: #032149;
+    margin-bottom: 2px;
+    line-height: 1.3;
+}
+
+.press-card-sub {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+}
+
+.press-card-arrow {
+    flex-shrink: 0;
+    color: #23a9c6;
+    font-size: 1.6em;
+    transition: transform 0.2s ease;
+}
+
+.press-card:hover .press-card-arrow {
+    transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+    .press-card {
+        gap: 14px;
+        padding: 16px 18px;
+    }
+    .press-card-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .press-card-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+    .press-card-title {
+        font-size: 1em;
+    }
+    .press-card-sub {
+        font-size: 0.82em;
+    }
+}
+
+/* Mini "Interview" link in the nav menu */
+.nav-link-press {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    margin: 8px 12px;
+    background: rgba(35, 169, 198, 0.1);
+    border: 1px solid rgba(35, 169, 198, 0.4);
+    border-radius: 999px;
+    color: #23a9c6;
+    text-decoration: none;
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    transition: background 0.2s ease, color 0.2s ease;
+    align-self: flex-start;
+}
+
+.nav-link-press:hover {
+    background: #23a9c6;
+    color: #faf7f6;
+}
+
+.nav-link-press svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.nav-link-press-badge {
+    font-size: 0.7em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+@media (max-width: 768px) {
+    .nav-menu .nav-link-press {
+        align-self: center;
+        margin: 8px auto 16px;
+        background: rgba(35, 169, 198, 0.18);
+        border-color: rgba(35, 169, 198, 0.5);
+        color: #23a9c6;
+        font-size: 0.95em;
+        padding: 12px 20px;
+    }
+    .nav-menu .nav-link-press:hover {
+        background: #23a9c6;
+        color: #faf7f6;
+    }
+    .nav-menu .nav-link-press svg {
+        width: 18px;
+        height: 18px;
+    }
+}
